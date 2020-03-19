@@ -1,11 +1,11 @@
 import React from "react";
-// import "./style.scss";
+import "./style.scss";
 
 
 const Button = () => {
 
     return (
-        <button>Click me</button>
+        <button>Graj</button>
     )
 }
 

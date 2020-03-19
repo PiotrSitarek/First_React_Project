@@ -1,0 +1,27 @@
+.quizDiv {
+    height: 100vh;
+    background: tomato;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flagStyle {
+    width: 150px;
+    height: 100px;
+
+}
+
+#confirmButton {
+    width: 536px;
+}
+
+#inputAnswer {
+    margin: 10px;
+    width: 500px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: blue;
+    border-color: red;
+}

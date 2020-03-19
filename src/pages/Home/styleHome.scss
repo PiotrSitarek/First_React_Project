@@ -1,0 +1,22 @@
+.firstDiv {
+    width: 100%;
+    height: 100vh;
+    background: tomato;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+img {
+    width: 50%;
+    height: 60%;
+}
+
+button {
+    color: blue;
+    border: red 2px solid;
+    background: burlywood;
+    text-decoration: none;
+    margin: 10px;
+}
