@@ -14,17 +14,20 @@ const WinnersList = () => {
 
     const [nameList, setNameList] = useState([]);
 
+    useEffect(() => {
 
+        fetch("http://localhost:3000/winersbase")
+            .then((result) => result.json())
+            .then((result) => setNameList(result));
+    }, [])
 
-    fetch("http://localhost:3000/winersbase")
-        .then((result) => result.json())
-        .then((result) => setNameList(result));
 
     if (nameList.length === 0) {
         return (
             <div className="winnersListDiv">
                 <h1>Pusta lista? Zagraj jak najszybciej!</h1>
                 <Link to="/Quiz"><button >Graj!</button></Link>
+                <Link to="/"><button >Home</button></Link>
 
             </div>)
     }
@@ -34,6 +37,7 @@ const WinnersList = () => {
     return (
         <div className="winnersListDiv">
             <Link to="/Quiz"><button >Try again</button></Link>
+
             <h1> Lista zwycięzców</h1>
             {nameList.map(element => <p key={element.id}>{element.id}.{element.name}</p>)}
         </div>

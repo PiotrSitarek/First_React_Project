@@ -9,13 +9,15 @@ import {
     NavLink,
     useHistory
 } from 'react-router-dom';
+import Quiz from "../Quiz/Quiz"
 
 const Winner = () => {
     const [name, setName] = useState('');
     const history = useHistory()
+    // console.log(props);
 
-    const confirmName = () => {
-
+    const confirmName = (event) => {
+        event.preventDefault();
         const nameData = {
             name: name,
         }
@@ -33,7 +35,7 @@ const Winner = () => {
     return (
         <div className="looseDiv">
             <h1>Gratulacje!</h1>
-            <img src="./firework.gif" alt="winner" />
+            <img id="firework" src="./firework.gif" alt="winner" />
             <p>Dopisz się do listy zwycięzców!</p>
             <form onSubmit={event => confirmName(event)}>
                 <input id="nameInput" type="text" placeholder="Podaj swoje imię..." onChange={event => setName(event.target.value)}></input>
