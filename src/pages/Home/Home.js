@@ -9,24 +9,15 @@ import {
     NavLink,
 } from 'react-router-dom';
 
-// jakim cudem nie działa ścieżka ../images/sheldon.png
-
-
 const Home = () => {
 
-    // setTimeout(() => {
-    //     window.location.href = "../../components/Button/index.js";
-    // }, 2000);
-    // const przenies = () => {
-
-    // }
     return (
 
         <div className="firstDiv">
             <h1>Sheldon Cooper presents:</h1>
             <img src="./sheldon.png" alt="Sheldon on his spot" />
-            <Link to="/Quiz"><button >Graj!</button></Link>
-            <Link to="/WinnersList"><button>Lista</button></Link>
+            <Link to="/Quiz"><button className="quizButtonStyle">Graj!</button></Link>
+            <Link to="/WinnersList"><button className="quizButtonStyle">Lista</button></Link>
         </div>
 
 

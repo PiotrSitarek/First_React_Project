@@ -1,6 +1,8 @@
 .quizDiv {
     height: 100vh;
-    background: lightgoldenrodyellow;
+    background-image: url(../../images/worldHigh.svg);
+    background-position-x: 260px;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,8 +18,8 @@
 .divFlagStyle {
     width: 180px;
     height: 130px;
-    background: pink;
-    border: solid 2px red;
+    background: rgba(135, 206, 250, 0.5);
+    border: solid 2px lightskyblue;
     border-radius: 0.5rem;
     display: flex;
     justify-content: center;
@@ -27,14 +29,20 @@
 
 #confirmButton {
     width: 536px;
+    background: rgba(135, 206, 250, 0.5);
+
 }
 
 #inputAnswer {
     margin: 10px;
     width: 500px;
     padding: 0.5rem 1rem;
-    background-color: pink;
+    background: rgba(135, 206, 250, 0.5);
     border-radius: 0.5rem;
-    color: blue;
-    border-color: red;
+    color: black;
+    border-color: lightskyblue
+}
+
+.quizButtonStyle {
+    background: rgba(135, 206, 250, 0.5);
 }

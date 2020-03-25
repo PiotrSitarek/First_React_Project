@@ -1,0 +1,71 @@
+@import "grid";
+
+.pageContainer {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../../images/worldHigh.svg);
+    background-position-x: 260px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.container {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    border: lightskyblue solid 3px;
+    border-radius: 50px;
+    background: rgba(135, 206, 250, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#searchInput {
+    border: rgb(135, 206, 250) solid 1px;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+}
+
+button {
+    border: lightskyblue solid 3px;
+    border-radius: 50px;
+    background: lightblue;
+    color: black
+}
+
+.quizSection {
+    margin-right: 10px;
+}
+
+#quizText {
+    text-decoration: none;
+}
+
+.dataSection {
+    width: 300px;
+    height: 300px;
+    background: rgba(135, 206, 250, 0.5);
+    // visibility: hidden;
+    position: relative;
+
+}
+
+.fa-window-close {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}

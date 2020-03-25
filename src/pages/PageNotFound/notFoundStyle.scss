@@ -1,6 +1,8 @@
 .notFoundStyle {
     height: 100vh;
-    background: lightgoldenrodyellow;
+    background-image: url(../../images/worldHigh.svg);
+    background-position-x: 260px;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,40 +1,56 @@
 {
   "winersbase": [
     {
-      "name": "Janek 10:09",
+      "name": "Janek o szesnastej",
+      "wyniczek": {
+        "history": {
+          "length": 3,
+          "action": "PUSH",
+          "location": {
+            "pathname": "/Winner",
+            "search": "",
+            "hash": ""
+          }
+        },
+        "location": {
+          "pathname": "/Winner",
+          "search": "",
+          "hash": ""
+        },
+        "match": {
+          "path": "/Winner",
+          "url": "/Winner",
+          "isExact": true,
+          "params": {}
+        }
+      },
       "id": 1
     },
     {
-      "name": "Tomek 10:02",
+      "name": "Molly",
+      "wyniczek": {
+        "history": {
+          "length": 3,
+          "action": "PUSH",
+          "location": {
+            "pathname": "/Winner",
+            "search": "",
+            "hash": ""
+          }
+        },
+        "location": {
+          "pathname": "/Winner",
+          "search": "",
+          "hash": ""
+        },
+        "match": {
+          "path": "/Winner",
+          "url": "/Winner",
+          "isExact": true,
+          "params": {}
+        }
+      },
       "id": 2
-    },
-    {
-      "name": "asd",
-      "id": 3
-    },
-    {
-      "name": "Jarek 8:50",
-      "id": 4
-    },
-    {
-      "name": "Krzychu 8;51",
-      "id": 5
-    },
-    {
-      "name": "qwertyy",
-      "id": 6
-    },
-    {
-      "name": "ko",
-      "id": 7
-    },
-    {
-      "name": "asd",
-      "id": 8
-    },
-    {
-      "name": "Piotrek",
-      "id": 9
     }
   ]
 }

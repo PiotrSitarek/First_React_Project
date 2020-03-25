@@ -3,14 +3,27 @@
     width: 500px;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    color: blue;
-    border-color: red;
+    color: black;
+    border-color: lightskyblue;
+    background: rgba(135, 206, 250, 0.5);
 }
 
 #nameConfirmButton {
     width: 536px;
+    background: rgba(135, 206, 250, 0.5);
 }
 
 #firework {
     border-radius: 50%;
+}
+
+.winDiv {
+    height: 100vh;
+    background-image: url(../../images/worldHigh.svg);
+    background-position-x: 260px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

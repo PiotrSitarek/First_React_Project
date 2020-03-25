@@ -14,8 +14,6 @@ import Quiz from "../Quiz/Quiz"
 const Winner = () => {
     const [name, setName] = useState('');
     const history = useHistory()
-    // console.log(props);
-
     const confirmName = (event) => {
         event.preventDefault();
         const nameData = {

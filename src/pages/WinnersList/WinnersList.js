@@ -26,8 +26,8 @@ const WinnersList = () => {
         return (
             <div className="winnersListDiv">
                 <h1>Pusta lista? Zagraj jak najszybciej!</h1>
-                <Link to="/Quiz"><button >Graj!</button></Link>
-                <Link to="/"><button >Home</button></Link>
+                <Link to="/Quiz"><button className="quizButtonStyle">Graj!</button></Link>
+                <Link to="/"><button className="quizButtonStyle" >Search</button></Link>
 
             </div>)
     }

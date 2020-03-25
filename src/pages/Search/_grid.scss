@@ -1,0 +1,43 @@
+$grid_columns: 12;
+$column_width: (100% / $grid_columns);
+
+%clearfix {
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .row {
+        @extend %clearfix;
+
+        [class*='col-'] {
+            display: block;
+            width: 100%;
+
+
+        }
+
+        @for $i from 1 through $grid_columns {
+            .col-#{$i} {
+                width: ($column_width * $i);
+            }
+        }
+
+
+    }
+}

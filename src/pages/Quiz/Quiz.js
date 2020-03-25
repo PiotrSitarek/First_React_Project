@@ -18,24 +18,8 @@ let result;
 const Quiz = () => {
 
     const [countryListShuffled, setcountryListShuffled] = useState([]); // 
-
     const [answer, setAnswerValue] = useState();
-
     const history = useHistory()
-
-    // const [time, setTime] = useState(0);
-    // console.log(time)
-    // useEffect(() => {
-    //     const interVal = setInterval(() => {
-    //         setTime(prevState => prevState + 1);
-
-    //     }, 1000)
-    //     return () => {
-    //         clearInterval(interVal)
-    //     }
-    // }, [])
-
-
     const getShuffled = (event) => {
         event.preventDefault();
         setcountryListShuffled(shuffle(countryListShuffled));
@@ -44,16 +28,15 @@ const Quiz = () => {
     useEffect(() => {
         fetch("https://restcountries.eu/rest/v2/all")
             .then((result) => result.json())
-            .then((result) => setcountryListShuffled(shuffle(result))) // kolejny then który wymiesza mi tylko 3 odpowiedzi 
-            .then(result => shuffle(result))
-        //   w złym miejscu mam ostani shuffle
+            .then((result) => setcountryListShuffled(shuffle(result)))
+
     }, []);
 
-    if (countryListShuffled.length === 0) { // kiedy tablica na początku jest pusta, dzięki temu nie wywali błędu
+    if (countryListShuffled.length === 0) {
         return <h1>Loading data</h1>
     }
     const answerInput = document.querySelector("#inputAnswer")
-    const clearAnswerInput = (event) => {   // clear input trzeba sprawdzić czy czyści
+    const clearAnswerInput = (event) => {
         event.preventDefault();
         answerInput.value = ""
     }
@@ -63,15 +46,13 @@ const Quiz = () => {
 
         if (countryListShuffled[0].name === answer) {
             result = counter++;
-            answerInput.value = ""; // do wywalenia
-            alert("Dobra odpowiedź! Graj dalej!")  // popUP!!!
+            answerInput.value = "";
+            alert("Dobra odpowiedź! Graj dalej!")
             setcountryListShuffled(shuffle(countryListShuffled));
 
             if (counter === 2) {
                 history.push("/Winner")
-                // const licznik = time;
-                // console.log("ELO " + licznik)
-                // return <Winner propsTime={licznik} />
+
             }
 
         } else {
@@ -92,10 +73,10 @@ const Quiz = () => {
             </div>
 
 
-            <button onClick={getShuffled} >Wylosuj flagę</button>
+            <button className="quizButtonStyle" onClick={getShuffled} >Wylosuj flagę</button>
             <p>* jeśli jesteś cienki we flagi, możesz użyć podpowiedzi.</p>
             {shuffle(countryListShuffled.slice(0, 3)).map(element => <p key={element.population}>{element.name}</p>)}
-            {/* <p>{countryListShuffled[0].name}</p> */}
+
 
             <form onSubmit={event => confirmAnswer(event)}>
                 <input type="text" placeholder="Twoja odpowiedź to..." id="inputAnswer" onChange={event => setAnswerValue(event.target.value)}></input>
@@ -103,11 +84,11 @@ const Quiz = () => {
                 <br></br>
                 <button id="confirmButton" type="submit">Sprawdź odpowiedź</button>
                 <br></br>
-                <Link to="/"><button >Home</button></Link> <p>{countryListShuffled[0].name}</p>
-                {/* <button onClick={event => clearAnswerInput(event)}>Wyczyść pole odpowiedzi</button> */}
+                <Link to="/"><button className="quizButtonStyle">Search</button></Link> <p>{countryListShuffled[0].name}</p>
+
 
             </form>
-            {/*nie wiem czemu onChange zmienia się kolejność nazw */}
+
 
 
         </div>
