@@ -25,8 +25,8 @@ const WinnersList = () => {
     if (nameList.length === 0) {
         return (
             <div className="winnersListDiv">
-                <h1>Pusta lista? Zagraj jak najszybciej!</h1>
-                <Link to="/Quiz"><button className="quizButtonStyle">Graj!</button></Link>
+                <h1>Empty list?! Let`s play </h1>
+                <Link to="/Quiz"><button className="quizButtonStyle">Play</button></Link>
                 <Link to="/"><button className="quizButtonStyle" >Search</button></Link>
 
             </div>)
@@ -38,7 +38,7 @@ const WinnersList = () => {
         <div className="winnersListDiv">
             <Link to="/Quiz"><button >Try again</button></Link>
 
-            <h1> Lista zwycięzców</h1>
+            <h1>Winners list</h1>
             {nameList.map(element => <p key={element.id}>{element.id}.{element.name}</p>)}
         </div>
     )

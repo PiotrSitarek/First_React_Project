@@ -12,9 +12,9 @@ const Loose = () => {
 
     return (
         <div className="looseDiv">
-            <h1>Przegrałeś</h1>
+            <h1>You loose!</h1>
             <img src="./looser.jpg" alt="looser" />
-            <Link to="/Quiz"><button>Spróbuj jeszcze raz</button></Link>
+            <Link to="/Quiz"><button>Try again</button></Link>
         </div>
     )
 }

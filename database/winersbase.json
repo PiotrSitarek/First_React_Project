@@ -1,56 +1,5 @@
 {
   "winersbase": [
-    {
-      "name": "Janek o szesnastej",
-      "wyniczek": {
-        "history": {
-          "length": 3,
-          "action": "PUSH",
-          "location": {
-            "pathname": "/Winner",
-            "search": "",
-            "hash": ""
-          }
-        },
-        "location": {
-          "pathname": "/Winner",
-          "search": "",
-          "hash": ""
-        },
-        "match": {
-          "path": "/Winner",
-          "url": "/Winner",
-          "isExact": true,
-          "params": {}
-        }
-      },
-      "id": 1
-    },
-    {
-      "name": "Molly",
-      "wyniczek": {
-        "history": {
-          "length": 3,
-          "action": "PUSH",
-          "location": {
-            "pathname": "/Winner",
-            "search": "",
-            "hash": ""
-          }
-        },
-        "location": {
-          "pathname": "/Winner",
-          "search": "",
-          "hash": ""
-        },
-        "match": {
-          "path": "/Winner",
-          "url": "/Winner",
-          "isExact": true,
-          "params": {}
-        }
-      },
-      "id": 2
-    }
+
   ]
 }

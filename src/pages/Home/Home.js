@@ -16,8 +16,8 @@ const Home = () => {
         <div className="firstDiv">
             <h1>Sheldon Cooper presents:</h1>
             <img src="./sheldon.png" alt="Sheldon on his spot" />
-            <Link to="/Quiz"><button className="quizButtonStyle">Graj!</button></Link>
-            <Link to="/WinnersList"><button className="quizButtonStyle">Lista</button></Link>
+            <Link to="/Quiz"><button className="quizButtonStyle">Play</button></Link>
+            <Link to="/WinnersList"><button className="quizButtonStyle">Winners List</button></Link>
         </div>
 
 

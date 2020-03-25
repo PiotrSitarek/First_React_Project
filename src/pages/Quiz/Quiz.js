@@ -47,7 +47,7 @@ const Quiz = () => {
         if (countryListShuffled[0].name === answer) {
             result = counter++;
             answerInput.value = "";
-            alert("Dobra odpowiedź! Graj dalej!")
+            alert("Good answer!")
             setcountryListShuffled(shuffle(countryListShuffled));
 
             if (counter === 2) {
@@ -66,25 +66,24 @@ const Quiz = () => {
     return (
         <div className="quizDiv">
 
-            <h1>Którego państwa jest to flaga?</h1>
-            <h2>gramy do 2 prawidłowych odpowiedzi</h2>
+            <h1>Which country's flag is this?</h1>
             <div className="divFlagStyle">
                 <img className="flagStyle" src={countryListShuffled[0].flag} alt="tu powinna byc flaga!" />
             </div>
 
 
-            <button className="quizButtonStyle" onClick={getShuffled} >Wylosuj flagę</button>
-            <p>* jeśli jesteś cienki we flagi, możesz użyć podpowiedzi.</p>
+            <button className="quizButtonStyle" onClick={getShuffled} >Draw next flag</button>
+            <p>You can use prompt</p>
             {shuffle(countryListShuffled.slice(0, 3)).map(element => <p key={element.population}>{element.name}</p>)}
 
 
             <form onSubmit={event => confirmAnswer(event)}>
-                <input type="text" placeholder="Twoja odpowiedź to..." id="inputAnswer" onChange={event => setAnswerValue(event.target.value)}></input>
+                <input type="text" placeholder="Your answer is ..." id="inputAnswer" onChange={event => setAnswerValue(event.target.value)}></input>
 
                 <br></br>
-                <button id="confirmButton" type="submit">Sprawdź odpowiedź</button>
+                <button id="confirmButton" type="submit">Check your answer</button>
                 <br></br>
-                <Link to="/"><button className="quizButtonStyle">Search</button></Link> <p>{countryListShuffled[0].name}</p>
+                <Link to="/"><button className="quizButtonStyle">Back to search</button></Link>
 
 
             </form>

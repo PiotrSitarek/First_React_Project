@@ -32,13 +32,13 @@ const Winner = () => {
 
     return (
         <div className="looseDiv">
-            <h1>Gratulacje!</h1>
+            <h1>Congratulations!</h1>
             <img id="firework" src="./firework.gif" alt="winner" />
-            <p>Dopisz się do listy zwycięzców!</p>
+            <p>Add yourself to a winners list</p>
             <form onSubmit={event => confirmName(event)}>
-                <input id="nameInput" type="text" placeholder="Podaj swoje imię..." onChange={event => setName(event.target.value)}></input>
+                <input id="nameInput" type="text" placeholder="Your name is ..." onChange={event => setName(event.target.value)}></input>
                 <br></br>
-                <button id="nameConfirmButton" type="submit">Dopisz się!</button>
+                <button id="nameConfirmButton" type="submit">Add!</button>
             </form>
         </div>
     )
