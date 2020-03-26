@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import style from "./styleWin.scss"
-import WinnerList from "../WinnersList/WinnersList"
 import {
     HashRouter as Router,
     Route,

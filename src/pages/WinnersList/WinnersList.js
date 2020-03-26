@@ -6,7 +6,6 @@ import {
     Link,
     Switch,
     NavLink,
-    useHistory
 } from 'react-router-dom';
 
 const WinnersList = () => {

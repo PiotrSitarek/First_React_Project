@@ -12,7 +12,7 @@
 }
 
 .container {
-    margin-left: 10px;
+    margin-left: 100px;
     margin-top: 10px;
     width: 200px;
     height: 200px;
@@ -33,12 +33,6 @@ form {
 
 }
 
-#searchInput {
-    border: rgb(135, 206, 250) solid 1px;
-    border-radius: 50px;
-    padding: 10px;
-    margin: 10px 0 10px 0;
-}
 
 button {
     border: lightskyblue solid 3px;
@@ -55,17 +49,70 @@ button {
     text-decoration: none;
 }
 
-.dataSection {
-    width: 300px;
-    height: 300px;
-    background: rgba(135, 206, 250, 0.5);
-    // visibility: hidden;
-    position: relative;
-
-}
-
 .fa-window-close {
     position: absolute;
     left: 0px;
     top: 0px;
+}
+
+.searchSection {
+    h2 {
+        position: absolute;
+        top: 50px
+    }
+
+    .div {
+        position: absolute;
+        top: 90px;
+        left: 110px;
+        border: 2px solid lightblue;
+
+        input {
+            position: absolute;
+            top: 0;
+            border: rgb(135, 206, 250) solid 1px;
+            // border-radius: 50px;
+            // padding: 10px;
+            // margin: 10px 0 10px 0;
+            width: 180px
+        }
+
+        ul {
+            position: absolute;
+            top: 20px;
+            list-style: none;
+            border: 2px solid lightblue;
+            background: rgba(135, 206, 250, 0.5);
+            width: 180px;
+        }
+    }
+}
+
+.divFlagStyle {
+    width: 180px;
+    height: 130px;
+    background: rgba(135, 206, 250, 0.5);
+    border: solid 2px lightskyblue;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .flagStyle {
+        width: 150px;
+        height: 100px;
+
+    }
+
+}
+
+.dataSection {
+    width: 500px;
+    height: 600px;
+    background: rgba(135, 206, 250, 0.5);
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
 }
