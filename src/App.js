@@ -24,9 +24,7 @@ function App() {
         <Route path="/Winner" component={Winner} />
         <Route path="/Home" component={Home} />
         <Route path="/WinnersList" component={WinnersList} />
-
-
-        <Route component={PageNotFound} /> {/*komponent not found zawsze na końcu!*/}
+        <Route component={PageNotFound} />
       </Switch>
     </Router>
   )

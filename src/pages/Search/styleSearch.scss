@@ -100,7 +100,7 @@ header {
 
             ul {
                 position: absolute;
-                top: 50px;
+                top: 49px;
                 list-style: none;
                 border: 2px solid lightblue;
                 border-radius: 0 0 10px 10px;
@@ -109,6 +109,11 @@ header {
 
                 li {
                     padding: 5px;
+                }
+
+                li:hover {
+                    border: lightblue 2px ridge;
+
                 }
             }
         }
