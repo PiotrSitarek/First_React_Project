@@ -6,13 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const Search = () => {
-  const [divStyle, setdivStyle] = useState("hidden")
+  const [divStyle, setdivStyle] = useState("none")
   const [countryList, setcountryList] = useState([]);
   const [suggestionsState, setSuggestionsState] = useState([]);
   const [text, setText] = useState('');
   const [wygrana, setWygrana] = useState([]);
   const style = {
-    visibility: divStyle
+    display: divStyle
   }
   useEffect(() => {
     fetch("https://restcountries.eu/rest/v2/all")
@@ -21,7 +21,7 @@ const Search = () => {
   }, [])
 
   const dataSectionHide = () => {
-    setdivStyle("hidden")
+    setdivStyle("none")
   }
 
   const onTextChange = (event) => {
@@ -48,7 +48,7 @@ const Search = () => {
       if (element.name == value) {
         setWygrana(element)
       }
-      setdivStyle("visible")
+      setdivStyle("block")
 
     })
   }
@@ -83,16 +83,18 @@ const Search = () => {
   return (
     <>
       <div className="pageContainer">
-        <section className="container searchSection">
-          <h2>Search Country</h2>
-
-          <div className="div">
-            <input value={text} id="searchInput" className="autoCountriesInput" type="text" onChange={event => onTextChange(event)}></input>
-            {renderSuggestions()}
+        <header>
+          <h2>Country search</h2>
+          <div>
+            <div className="div">
+              <input value={text} id="searchInput" className="autoCountriesInput" type="text" placeholder="Select country..." onChange={event => onTextChange(event)}></input>
+              {renderSuggestions()}
+            </div>
+            <Link to="/Home"><p >Quiz</p></Link>
+            <p>Contact</p>
           </div>
-
-        </section>
-        <section style={style} className="container dataSection">
+        </header>
+        <section style={style} className="dataSection">
           <i onClick={dataSectionHide} className="far fa-window-close"></i>
           <div>
             <div className="divFlagStyle">
@@ -106,10 +108,6 @@ const Search = () => {
             <p>Country code: {wygrana.alpha3Code}</p>
             <p>Native name: {wygrana.nativeName}</p>
           </div>
-        </section>
-
-        <section className="container quizSection">
-          <Link to="/Home"><h2 id="quizText">Quiz</h2></Link>
         </section>
       </div>
     </>
