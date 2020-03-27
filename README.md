@@ -1,3 +1,6 @@
+This project was projected and created by Piotr Sitarek.
+https://cranky-kalam-967908.netlify.com/#/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
