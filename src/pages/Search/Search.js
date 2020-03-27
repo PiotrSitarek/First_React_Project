@@ -109,7 +109,7 @@ const Search = () => {
             <p>Capital: {wygrana.capital}</p>
             <p>Population: {wygrana.population}</p>
             <p>Region: {wygrana.subregion}</p>
-            <p>Area: {wygrana.area}km^2</p>
+            <p>Area: {wygrana.area}km<sup>2</sup></p>
             <p>Country code: {wygrana.alpha3Code}</p>
             <p>Native name: {wygrana.nativeName}</p>
           </div>
