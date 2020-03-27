@@ -48,7 +48,7 @@ button {
     height: 400px;
     background: rgba(135, 206, 250, 0.5);
     display: block; // tutaj zmienić 
-    border: lightskyblue solid 3px;
+    border: skyblue solid 3px;
     border-radius: 50px;
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@ header {
         .div {
             input {
 
-                border: rgb(135, 206, 250) solid 1px;
+                border: skyblue solid 1px;
                 position: relative;
                 border-radius: 5px;
                 width: 180px;
@@ -102,7 +102,7 @@ header {
                 position: absolute;
                 top: 49px;
                 list-style: none;
-                border: 2px solid lightblue;
+                border: 2px solid skyblue;
                 border-radius: 0 0 10px 10px;
                 background: rgb(135, 206, 250);
                 width: 180px;
@@ -112,7 +112,7 @@ header {
                 }
 
                 li:hover {
-                    border: lightblue 2px ridge;
+                    border: skyblue 2px ridge;
 
                 }
             }
@@ -133,7 +133,7 @@ header {
     height: 100px;
     background: rgba(135, 206, 250, 0.5);
     display: block; // tutaj zmienić 
-    border: lightskyblue solid 3px;
+    border: skyblue solid 3px;
     border-radius: 50px;
     position: relative;
     display: flex;
