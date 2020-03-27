@@ -7,12 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const Search = () => {
   const [divStyle, setdivStyle] = useState("none")
+  const [contactStyleState, setContactStyle] = useState("none")
   const [countryList, setcountryList] = useState([]);
   const [suggestionsState, setSuggestionsState] = useState([]);
   const [text, setText] = useState('');
   const [wygrana, setWygrana] = useState([]);
   const style = {
     display: divStyle
+  }
+  const contactStyle = {
+    display: contactStyleState
   }
   useEffect(() => {
     fetch("https://restcountries.eu/rest/v2/all")
@@ -23,6 +27,16 @@ const Search = () => {
   const dataSectionHide = () => {
     setdivStyle("none")
   }
+  const contactContainerHide = () => {
+    setContactStyle("none")
+  }
+  const contactContainerShow = () => {
+
+    setdivStyle("none")
+    setContactStyle("block")
+  }
+
+
 
   const onTextChange = (event) => {
     const value = event.target.value
@@ -39,15 +53,17 @@ const Search = () => {
     setSuggestionsState(suggestions);
     setText(value);
   }
+
   const suggestionSelected = (value) => {
     setText(value);
     setSuggestionsState([]);
-    console.log(wygrana)
+    setText("")
 
     countryList.filter(element => {
       if (element.name == value) {
         setWygrana(element)
       }
+      setContactStyle("none")
       setdivStyle("block")
 
     })
@@ -68,18 +84,7 @@ const Search = () => {
     return <h1>Loading data</h1>
   }
 
-  // const searchEngine = (event) => {
-  //   // event.preventDefault();
-  //   // const searchInputValue = document.querySelector("#searchInput")
-  //   // const countryName = searchInputValue.value
 
-  //   countryList.filter(element => {
-  //     if (element.name == text) {
-  //       setWygrana(element)
-  //       console.log("dane w bazie")
-  //     }
-  //   })
-  // }
   return (
     <>
       <div className="pageContainer">
@@ -91,7 +96,7 @@ const Search = () => {
               {renderSuggestions()}
             </div>
             <Link to="/Home"><p >Quiz</p></Link>
-            <p>Contact</p>
+            <p onClick={contactContainerShow}>Contact</p>
           </div>
         </header>
         <section style={style} className="dataSection">
@@ -109,7 +114,16 @@ const Search = () => {
             <p>Native name: {wygrana.nativeName}</p>
           </div>
         </section>
+        <div style={contactStyle} className="contactContainer">
+          <i onClick={contactContainerHide} className="far fa-window-close"></i>
+          <div>
+            <h3>Piotr Sitarek</h3>
+            <p>Warsaw</p>
+            <p>piotr.sitarek.05@gmail.com</p>
+          </div>
+        </div>
       </div>
+
     </>
   )
 }

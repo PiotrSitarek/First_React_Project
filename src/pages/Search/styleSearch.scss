@@ -47,7 +47,7 @@ button {
     width: 300px;
     height: 400px;
     background: rgba(135, 206, 250, 0.5);
-    display: none;
+    display: block; // tutaj zmienić 
     border: lightskyblue solid 3px;
     border-radius: 50px;
     display: flex;
@@ -114,10 +114,32 @@ header {
         }
 
         p {
-            text-decoration: none;
+            text-transform: none;
             color: black;
             padding: 10px;
 
         }
+    }
+}
+
+.contactContainer {
+
+    width: 300px;
+    height: 100px;
+    background: rgba(135, 206, 250, 0.5);
+    display: block; // tutaj zmienić 
+    border: lightskyblue solid 3px;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
