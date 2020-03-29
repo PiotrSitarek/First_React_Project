@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const Search = () => {
-  const [divStyle, setdivStyle] = useState("none")
+  const [dataDivStyle, setdataDivStyle] = useState("none")
   const [contactStyleState, setContactStyle] = useState("none")
   const [countryList, setcountryList] = useState([]);
   const [suggestionsState, setSuggestionsState] = useState([]);
   const [text, setText] = useState('');
-  const [wygrana, setWygrana] = useState([]);
+  const [selectedCountry, setselectedCountry] = useState([]);
   const style = {
-    display: divStyle
+    display: dataDivStyle
   }
   const contactStyle = {
     display: contactStyleState
@@ -25,14 +25,14 @@ const Search = () => {
   }, [])
 
   const dataSectionHide = () => {
-    setdivStyle("none")
+    setdataDivStyle("none")
   }
   const contactContainerHide = () => {
     setContactStyle("none")
   }
   const contactContainerShow = () => {
 
-    setdivStyle("none")
+    setdataDivStyle("none")
     setContactStyle("block")
   }
 
@@ -41,13 +41,13 @@ const Search = () => {
   const onTextChange = (event) => {
     const value = event.target.value
     let suggestions = [];
-    let listakrajow = [];
+    let mapedCountryList = [];
     if (value.length > 0) {
       const regex = new RegExp(`^${value}`, 'i')
-      listakrajow = countryList.map(function (element, index, array) {
+      mapedCountryList = countryList.map(function (element, index, array) {
         return element.name
       })
-      suggestions = listakrajow.filter(v => regex.test(v))
+      suggestions = mapedCountryList.filter(v => regex.test(v))
 
     }
     setSuggestionsState(suggestions);
@@ -61,10 +61,10 @@ const Search = () => {
 
     countryList.filter(element => {
       if (element.name == value) {
-        setWygrana(element)
+        setselectedCountry(element)
       }
       setContactStyle("none")
-      setdivStyle("block")
+      setdataDivStyle("block")
 
     })
   }
@@ -103,15 +103,15 @@ const Search = () => {
           <i onClick={dataSectionHide} className="far fa-window-close"></i>
           <div>
             <div className="divFlagStyle">
-              <img className="flagStyle" src={wygrana.flag} alt="tu powinna byc flaga!" />
+              <img className="flagStyle" src={selectedCountry.flag} alt="tu powinna byc flaga!" />
             </div>
-            <h2>{wygrana.name}</h2>
-            <p>Capital: {wygrana.capital}</p>
-            <p>Population: {wygrana.population}</p>
-            <p>Region: {wygrana.subregion}</p>
-            <p>Area: {wygrana.area}km<sup>2</sup></p>
-            <p>Country code: {wygrana.alpha3Code}</p>
-            <p>Native name: {wygrana.nativeName}</p>
+            <h2>{selectedCountry.name}</h2>
+            <p>Capital: {selectedCountry.capital}</p>
+            <p>Population: {selectedCountry.population}</p>
+            <p>Region: {selectedCountry.subregion}</p>
+            <p>Area: {selectedCountry.area}km<sup>2</sup></p>
+            <p>Country code: {selectedCountry.alpha3Code}</p>
+            <p>Native name: {selectedCountry.nativeName}</p>
           </div>
         </section>
         <div style={contactStyle} className="contactContainer">
