@@ -17,7 +17,7 @@ let result;
 
 const Quiz = () => {
 
-    const [countryListShuffled, setcountryListShuffled] = useState([]); // 
+    const [countryListShuffled, setcountryListShuffled] = useState([]);
     const [answer, setAnswerValue] = useState();
     const history = useHistory()
     const getShuffled = (event) => {
