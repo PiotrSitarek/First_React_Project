@@ -1,5 +1,5 @@
 # Info
-This project was projected and created by Piotr Sitarek. It was my first application in ReactJS technology.
+This aplication was projected and created by Piotr Sitarek. It was my first application in ReactJS technology.
 Project is available at https://cranky-kalam-967908.netlify.com/#/
 
 ## Technologies
